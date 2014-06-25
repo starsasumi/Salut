@@ -1,0 +1,30 @@
+<salut:ContactListWindow title="%contactListWindow" maximized="true"
+        xmlns:bxml="http://pivot.apache.org/bxml"
+        xmlns="org.apache.pivot.wtk"
+        xmlns:salut="com.starbugs.salut"
+        minimumWidth="260">
+    <TablePane bxml:id="mainBoxPane" styles="{padding:0}">
+        <columns>
+            <TablePane.Column width="1*" />
+        </columns>
+        <TablePane.Row height="40">
+            <BoxPane bxml:id="addContactPane" styles="{verticalAlignment:'center', padding:5}">
+                <Label text="+" styles="{font:'Arial bold 18'}" /><Label text="%addContact" />
+            </BoxPane>
+        </TablePane.Row>
+        <TablePane.Row height="-1">
+            <Separator />
+        </TablePane.Row>
+        <TablePane.Row height="1*">
+            <ScrollPane horizontalScrollBarPolicy="FILL" verticalScrollBarPolicy="NEVER">
+                <GridPane bxml:id="contactListPane" columnCount="1" styles="{horizontalSpacing:0, verticalSpacing:1,
+            showHorizontalGridLines:true, showVerticalGridLines:false}">
+                    <GridPane.Row>
+                        <ActivityIndicator bxml:id="activityIndicator" active="true"
+                                           preferredWidth="60" preferredHeight="60" styles="{color:16}"/>
+                    </GridPane.Row>
+                </GridPane>
+            </ScrollPane>
+        </TablePane.Row>
+    </TablePane>
+</salut:ContactListWindow>

@@ -1,0 +1,16 @@
+{
+loginWindow :   "Salut! - Login",
+userAccount :   "User Account",
+password    :   "Password",
+login       :   "Login",
+contactListWindow   :   "Salut! - ",
+addContact  :   "Add a new friend",
+sendMessagePrompt   :   "Send a message",
+chatRoomWindow  :   "Salut! - ",
+ipRequestDialog :   "Please Enter Your IP Address",
+ipInput         :   "IP Address",
+confirm         :   "Confirm",
+receivedCall    :   "You received a video call",
+rejectCall      :   "Reject",
+answerCall      :   "Answer"
+}

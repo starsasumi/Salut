@@ -1,0 +1,5 @@
+out
+.idea
+*.log
+*.iml
+src/com/starbugs/salut/resources/config/local

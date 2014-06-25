@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Dialog bxml:id="dialog" title="%ipRequestDialog" maximized="false"
+                   xmlns:bxml="http://pivot.apache.org/bxml"
+                   xmlns:content="org.apache.pivot.wtk.content"
+                   xmlns:salut="com.starbugs.salut"
+                   xmlns="org.apache.pivot.wtk">
+
+    <BoxPane orientation="vertical" styles="{padding:15, horizontalAlignment:'right'}">
+        <Label bxml:id="infoLabel" text="%receivedCall"/>
+        <BoxPane styles="{verticalAlignment:'center', spacing:10}">
+            <PushButton bxml:id="cancelButton" buttonData="%rejectCall" ButtonPressListener.buttonPressed="dialog.close(false)"/>
+            <PushButton bxml:id="answerButton" buttonData="%answerCall" ButtonPressListener.buttonPressed="dialog.close(true)"/>
+        </BoxPane>
+    </BoxPane>
+
+</Dialog>

@@ -1,0 +1,44 @@
+<salut:ChatRoomWindow title="%chatRoomWindow" maximized="true"
+        xmlns:bxml="http://pivot.apache.org/bxml"
+        xmlns="org.apache.pivot.wtk"
+        xmlns:content="org.apache.pivot.wtk.content"
+        xmlns:salut="com.starbugs.salut"
+        minimumWidth="280"
+        minimumHeight="400">
+    <TablePane styles="{backgroundColor:'#E5E5E5'}">
+        <columns>
+            <TablePane.Column width="1*" />
+        </columns>
+        <TablePane.Row height="30">
+            <BoxPane styles="{verticalAlignment:'center', backgroundColor:'#E5E5E5', padding:{left:10, right:10}}">
+                <FlowPane bxml:id="toolBar">
+                    <PushButton bxml:id="videoButton" styles="{toolbar:true, minimumAspectRatio:1, maximumAspectRatio:1}">
+                        <content:ButtonData icon="@../img/video_call_logo.png" />
+                    </PushButton>
+                </FlowPane>
+            </BoxPane>
+        </TablePane.Row>
+        <TablePane.Row height="-1">
+            <Separator />
+        </TablePane.Row>
+        <TablePane.Row height="1*">
+            <ScrollPane bxml:id="chatScrollPane" horizontalScrollBarPolicy="FILL" verticalScrollBarPolicy="NEVER" styles="{backgroundColor:'#E5E5E5'}">
+                <BoxPane  bxml:id="chatContent" orientation="vertical" styles="{fill:true}"/>
+            </ScrollPane>
+        </TablePane.Row>
+        <TablePane.Row height="60">
+            <Border bxml:id="sendMessageBorder" styles="{color:'#4D90FE'}">
+                <BoxPane bxml:id="sendMessagePane" orientation="vertical" styles="{fill:true, verticalAlignment:'center'}">
+                    <StackPane styles="{backgroundColor:'#FFFFFF', padding:7}">
+                        <BoxPane bxml:id="sendMessagePrompt" styles="{padding:{left:4, top:4}}">
+                            <Label text="%sendMessagePrompt" styles="{color:'#929292'}" />
+                        </BoxPane>
+                        <ScrollPane horizontalScrollBarPolicy="FILL" verticalScrollBarPolicy="fill_to_capacity" maximumHeight="58" styles="{backgroundColor:'0xffffff00'}">
+                            <TextArea bxml:id="messageTextArea" styles="{backgroundColor:'0xffffff00'}"/>
+                        </ScrollPane>
+                    </StackPane>
+                </BoxPane>
+            </Border>
+        </TablePane.Row>
+    </TablePane>
+</salut:ChatRoomWindow>

@@ -1,0 +1,32 @@
+<salut:MessageBubblePane xmlns:bxml="http://pivot.apache.org/bxml"
+         xmlns="org.apache.pivot.wtk"
+         xmlns:effect="org.apache.pivot.wtk.effects"
+         xmlns:salut="com.starbugs.salut">
+    <bxml:define>
+        <effect:DropShadowDecorator bxml:id="messageDropShadow" blurRadius="3" xOffset="0" yOffset="0" shadowOpacity="0.3"/>
+    </bxml:define>
+    <styles horizontalAlignment="right"/>
+
+    <BoxPane styles="{verticalAlignment:'bottom', spacing:0, padding:10}">
+        <BoxPane bxml:id="contentPane"
+                 styles="{backgroundColor:'#FFFFFF',padding:5}"
+                 orientation="vertical">
+            <TextArea bxml:id="messageTextArea" maximumWidth="200" editable="false" />
+            <Label bxml:id="messageTimeLabel" styles="{color:'#B7B7B7'}"/>
+        </BoxPane>
+        <StackPane>
+            <ImageView bxml:id="avatar"
+                       maximumWidth="30" maximumHeight="30"
+                       image="@../img/avatar.png"
+                       styles="{fill:true, preserveAspectRatio:true}"/>
+            <BoxPane  styles="{verticalAlignment:'bottom', horizontalAlignment:'left'}">
+                <ImageView image="@../img/bubble_triangle_right.png"
+                           maximumWidth="10" maximumHeight="10"
+                           styles="{fill:true, preserveAspectRatio:true}"/>
+            </BoxPane>
+        </StackPane>
+    </BoxPane>
+    <bxml:script>
+        contentPane.getDecorators().add(messageDropShadow);
+    </bxml:script>
+</salut:MessageBubblePane>

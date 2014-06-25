@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<salut:LoginWindow title="%loginWindow" maximized="true"
+        xmlns:bxml="http://pivot.apache.org/bxml"
+        xmlns:content="org.apache.pivot.wtk.content"
+        xmlns:salut="com.starbugs.salut"
+        xmlns="org.apache.pivot.wtk">
+
+    <BoxPane orientation="vertical" styles="{padding:15, horizontalAlignment:'right'}">
+        <TextInput bxml:id="userAccountInput" prompt="%userAccount"/>
+        <TextInput bxml:id="passwordInput" prompt="%password" password="true"/>
+        <BoxPane styles="{verticalAlignment:'center'}">
+            <Label bxml:id="errorInfo" preferredWidth="113" styles="{wrapText:true, color:'#FF0000', font:'regular 10'}"/>
+            <ActivityIndicator bxml:id="loginActivityIndicator"
+                               preferredWidth="24" preferredHeight="24" styles="{color:16}"/>
+            <PushButton bxml:id="loginButton" buttonData="%login" />
+        </BoxPane>
+    </BoxPane>
+
+</salut:LoginWindow>

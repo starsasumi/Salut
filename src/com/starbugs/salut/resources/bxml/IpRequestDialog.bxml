@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<salut:IpRequestDialog title="%ipRequestDialog" maximized="false"
+                   xmlns:bxml="http://pivot.apache.org/bxml"
+                   xmlns:content="org.apache.pivot.wtk.content"
+                   xmlns:salut="com.starbugs.salut"
+                   xmlns="org.apache.pivot.wtk">
+
+    <BoxPane orientation="vertical" styles="{padding:15, horizontalAlignment:'right'}">
+        <Label bxml:id="infoLabel" preferredWidth="200" styles="{wrapText:true}" />
+        <TextInput bxml:id="ipInput" preferredWidth="200" prompt="%ipInput"/>
+        <BoxPane styles="{verticalAlignment:'center'}">
+            <Label bxml:id="errorInfoLabel" preferredWidth="113" styles="{wrapText:true, color:'#FF0000', font:'regular 10'}"/>
+            <ActivityIndicator bxml:id="activityIndicator"
+                               preferredWidth="24" preferredHeight="24" styles="{color:16}"/>
+            <PushButton bxml:id="confirmButton" buttonData="%confirm" />
+        </BoxPane>
+    </BoxPane>
+
+</salut:IpRequestDialog>

@@ -1,0 +1,25 @@
+<salut:VideoPhoneWindow title="%videoPhoneWindow" maximized="true"
+                        xmlns:bxml="http://pivot.apache.org/bxml"
+                        xmlns="org.apache.pivot.wtk"
+                        xmlns:effect="org.apache.pivot.wtk.effects"
+                        xmlns:salut="com.starbugs.salut">
+    <bxml:define>
+        <effect:DropShadowDecorator bxml:id="dropShadowDecorator" blurRadius="10" xOffset="0" yOffset="0" shadowOpacity="0.6"/>
+    </bxml:define>
+    <StackPane styles="{backgroundColor:'#E5E5E5'}">
+        <BoxPane bxml:id="bigVideoPane" styles="{fill: true, backgroundColor:'#000000'}"/>
+        <Border styles="{color:'#4D90FE'}">
+            <BoxPane  bxml:id="smallVideoPane"
+                      maximumWidth="160" maximumHeight="120"
+                      styles="{verticalAlignment:'bottom', horizontalAlignment:'right', padding:15, backgroundColor:'#000000'}" />
+        </Border>
+        <BoxPane styles="{verticalAlignment:'bottom', horizontalAlignment:'center', padding:15}">
+            <PushButton bxml:id="endCallButton" buttonData="End Call"
+                        preferredWidth="100" preferredHeight="40" styles="{backgroundColor:'#BB0000', color:'#FFFFFF', font:'24 bold'}"/>
+        </BoxPane>
+    </StackPane>
+    <bxml:script>
+        selfImage.getDecorators().add(dropShadowDecorator);
+        endCallButton.getDecorators().add(dropShadowDecorator);
+    </bxml:script>
+</salut:VideoPhoneWindow>

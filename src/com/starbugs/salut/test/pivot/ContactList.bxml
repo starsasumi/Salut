@@ -1,0 +1,42 @@
+<Window title="Contact List" maximized="true"
+        xmlns:bxml="http://pivot.apache.org/bxml"
+        xmlns="org.apache.pivot.wtk">
+    <TablePane bxml:id="mainBoxPane" styles="{padding:0}">
+        <columns>
+            <TablePane.Column width="1*" />
+        </columns>
+        <TablePane.Row height="40">
+            <BoxPane bxml:id="addContactPane" styles="{verticalAlignment:'center', padding:5}">
+                <Label text="+" styles="{font:'Arial bold 18'}" /><Label text="%ADD_CONTACT" />
+            </BoxPane>
+        </TablePane.Row>
+        <TablePane.Row height="-1">
+            <Separator />
+        </TablePane.Row>
+        <TablePane.Row height="1*">
+            <ScrollPane horizontalScrollBarPolicy="FILL" verticalScrollBarPolicy="NEVER">
+                <GridPane bxml:id="contactListPane" columnCount="1" styles="{horizontalSpacing:0, verticalSpacing:1,
+            showHorizontalGridLines:true, showVerticalGridLines:false}">
+                    <GridPane.Row>
+                        <BoxPane preferredHeight="60" styles="{verticalAlignment:'center', padding:7}">
+                            <ImageView styles="{backgroundColor:'#404040'}" image="@resources/img/avatar.JPG"/>
+                            <BoxPane orientation="vertical">
+                                <Label text="Doctor Lee" styles="{font:'bold 14'}"/>
+                                <Label text="You: Bye!" styles="{color:'#929292'}"/>
+                            </BoxPane>
+                        </BoxPane>
+                    </GridPane.Row>
+                    <GridPane.Row>
+                        <BoxPane preferredHeight="60" styles="{verticalAlignment:'center', padding:7}">
+                            <ImageView styles="{backgroundColor:'#404040'}" image="@resources/img/avatar.JPG"/>
+                            <BoxPane orientation="vertical">
+                                <Label text="Doctor Chan" styles="{font:'bold 14'}"/>
+                                <Label text="Chan: Meet me in two days." styles="{color:'#929292'}"/>
+                            </BoxPane>
+                        </BoxPane>
+                    </GridPane.Row>
+                </GridPane>
+            </ScrollPane>
+        </TablePane.Row>
+    </TablePane>
+</Window>

@@ -1,0 +1,37 @@
+<BoxPane xmlns:bxml="http://pivot.apache.org/bxml"
+         xmlns="org.apache.pivot.wtk"
+         xmlns:effect="org.apache.pivot.wtk.effects">
+    <bxml:define>
+        <effect:DropShadowDecorator bxml:id="messageDropShadow" blurRadius="3" xOffset="0" yOffset="0" shadowOpacity="0.3"/>
+    </bxml:define>
+    <bxml:script><![CDATA[
+    var messageContent = "Contains classes that define the structure and behavior of WTK user interface components.";
+    var maxWidth = 200;
+    var messageOrientation = "right";
+    ]]></bxml:script>
+    <styles horizontalAlignment="$messageOrientation"/>
+
+    <BoxPane styles="{verticalAlignment:'bottom', spacing:0, padding:10}">
+        <BoxPane bxml:id="contentPane"
+                 styles="{backgroundColor:'#FFFFFF',padding:5}"
+                 orientation="vertical">
+            <TextArea bxml:id="messageTextArea" maximumWidth="$maxWidth" editable="false"
+                      text="$messageContent" />
+            <Label bxml:id="messageTimeLabel" text="il y a 30 min" styles="{color:'#B7B7B7'}"/>
+        </BoxPane>
+        <StackPane>
+            <ImageView maximumWidth="30" maximumHeight="30"
+                       image="@resources/img/avatar.JPG"
+                       styles="{fill:true, preserveAspectRatio:true}"/>
+            <BoxPane  styles="{verticalAlignment:'bottom', horizontalAlignment:'left'}">
+                <ImageView bxml:id="bubbleTriangle"
+                           image="@resources/img/bubble_triangle_right.png"
+                           maximumWidth="10" maximumHeight="10"
+                           styles="{fill:true, preserveAspectRatio:true}"/>
+            </BoxPane>
+        </StackPane>
+    </BoxPane>
+    <bxml:script>
+        contentPane.getDecorators().add(messageDropShadow);
+    </bxml:script>
+</BoxPane>

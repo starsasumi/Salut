@@ -1,0 +1,14 @@
+<salut:ContactPane
+        xmlns:bxml="http://pivot.apache.org/bxml"
+        xmlns="org.apache.pivot.wtk"
+        xmlns:salut="com.starbugs.salut"
+        preferredHeight="60" styles="{verticalAlignment:'center', padding:7}">
+    <ImageView bxml:id="avatarImage"
+               styles="{backgroundColor:'#404040', fill:true, preserveAspectRatio:true}"
+               maximumWidth="50" maximumHeight="50"
+               image="@../img/avatar.png"/>
+    <BoxPane orientation="vertical">
+        <Label bxml:id="userNameLabel" styles="{font:'bold 14'}"/>
+        <Label bxml:id="extraInfoLabel" styles="{color:'#929292'}"/>
+    </BoxPane>
+</salut:ContactPane>
